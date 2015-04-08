@@ -60,6 +60,7 @@ import qualified Data.Ratio      as R
 
 import qualified Data.Tree as T
 
+import qualified Data.ReinterpretCast as RC
 import Data.Array.Unboxed
 
 #ifdef GENERICS
@@ -536,12 +537,12 @@ instance (Binary e) => Binary (Seq.Seq e) where
 -- Floating point
 
 instance Binary Double where
-    put d = put (decodeFloat d)
-    get   = liftM2 encodeFloat get get
+    put d = put (RC.doubleToWord d)
+    get   = liftM RC.wordToDouble get
 
 instance Binary Float where
-    put f = put (decodeFloat f)
-    get   = liftM2 encodeFloat get get
+    put f = put (RC.floatToWord f)
+    get   = liftM RC.wordToFloat get
 
 ------------------------------------------------------------------------
 -- Trees
