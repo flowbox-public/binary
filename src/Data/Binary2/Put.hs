@@ -5,7 +5,7 @@
 
 -----------------------------------------------------------------------------
 -- |
--- Module      : Data.Binary.Put
+-- Module      : Data.Binary2.Put
 -- Copyright   : Lennart Kolmodin
 -- License     : BSD3-style (see LICENSE)
 -- 
@@ -17,7 +17,7 @@
 --
 -----------------------------------------------------------------------------
 
-module Data.Binary.Put (
+module Data.Binary2.Put (
 
     -- * The Put type
       Put
@@ -54,8 +54,8 @@ module Data.Binary.Put (
   ) where
 
 import Data.Monoid
-import Data.Binary.Builder (Builder, toLazyByteString)
-import qualified Data.Binary.Builder as B
+import Data.Binary2.Builder (Builder, toLazyByteString)
+import qualified Data.Binary2.Builder as B
 
 import Data.Word
 import qualified Data.ByteString      as S

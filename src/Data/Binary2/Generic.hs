@@ -4,7 +4,7 @@
 
 -----------------------------------------------------------------------------
 -- |
--- Module      : Data.Binary.Generic
+-- Module      : Data.Binary2.Generic
 -- Copyright   : Bryan O'Sullivan
 -- License     : BSD3-style (see LICENSE)
 --
@@ -15,14 +15,14 @@
 -- Instances for supporting GHC generics.
 --
 -----------------------------------------------------------------------------
-module Data.Binary.Generic
+module Data.Binary2.Generic
     (
     ) where
 
 import Control.Applicative
-import Data.Binary.Class
-import Data.Binary.Get
-import Data.Binary.Put
+import Data.Binary2.Class
+import Data.Binary2.Get
+import Data.Binary2.Put
 import Data.Bits
 import Data.Word
 import GHC.Generics

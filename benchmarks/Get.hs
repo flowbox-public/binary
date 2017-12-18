@@ -18,8 +18,8 @@ import Data.Monoid (Monoid(mappend, mempty))
 import Data.Word (Word8, Word16, Word32)
 
 import Control.Applicative
-import Data.Binary.Get
-import Data.Binary ( get )
+import Data.Binary2.Get
+import Data.Binary2 ( get )
 
 import qualified Data.Serialize.Get as Cereal
 import qualified Data.Serialize as Cereal

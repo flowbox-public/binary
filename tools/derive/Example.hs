@@ -2,7 +2,7 @@
 
 import Data.Generics
 
-import Data.Binary
+import Data.Binary2
 
 import BinaryDerive
 

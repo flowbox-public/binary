@@ -26,9 +26,9 @@ import           Arbitrary                            (
                                                        arbitrarySizedNatural
 #endif
                                                       )
-import           Data.Binary
-import           Data.Binary.Get
-import           Data.Binary.Put
+import           Data.Binary2
+import           Data.Binary2.Get
+import           Data.Binary2.Put
 
 ------------------------------------------------------------------------
 

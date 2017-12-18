@@ -12,7 +12,7 @@
 
 -----------------------------------------------------------------------------
 -- |
--- Module      : Data.Binary.Class
+-- Module      : Data.Binary2.Class
 -- Copyright   : Lennart Kolmodin
 -- License     : BSD3-style (see LICENSE)
 --
@@ -24,7 +24,7 @@
 --
 -----------------------------------------------------------------------------
 
-module Data.Binary.Class (
+module Data.Binary2.Class (
 
     -- * The Binary class
       Binary(..)
@@ -38,8 +38,8 @@ module Data.Binary.Class (
 
 import Data.Word
 
-import Data.Binary.Put
-import Data.Binary.Get
+import Data.Binary2.Put
+import Data.Binary2.Get
 
 import Control.Monad
 import Foreign

@@ -13,7 +13,7 @@ import           Test.Framework.Providers.QuickCheck2
 import           Test.QuickCheck
 
 import           Arbitrary                            ()
-import qualified Data.Binary.Get                      as Binary
+import qualified Data.Binary2.Get                      as Binary
 
 tests :: [Test]
 tests = [ testProperty "action" prop_action

@@ -34,11 +34,11 @@
 -- 
 -- If you have specific requirements about the encoding format, you can use
 -- the encoding and decoding primitives directly, see the modules
--- "Data.Binary.Get" and "Data.Binary.Put".
+-- "Data.Binary2.Get" and "Data.Binary2.Put".
 --
 -----------------------------------------------------------------------------
 
-module Data.Binary (
+module Data.Binary2 (
 
     -- * The Binary class
       Binary(..)
@@ -75,11 +75,11 @@ module Data.Binary (
 
 import Data.Word
 
-import Data.Binary.Class
-import Data.Binary.Put
-import Data.Binary.Get
+import Data.Binary2.Class
+import Data.Binary2.Put
+import Data.Binary2.Get
 #ifdef GENERICS
-import Data.Binary.Generic ()
+import Data.Binary2.Generic ()
 #endif
 
 import qualified Data.ByteString as B ( hGet, length )
@@ -218,7 +218,7 @@ decodeFileOrFail :: Binary a => FilePath -> IO (Either (ByteOffset, String) a)
 decodeFileOrFail f =
   withBinaryFile f ReadMode $ \h -> do
     feed (runGetIncremental get) h
-  where -- TODO: put in Data.Binary.Get and name pushFromHandle?
+  where -- TODO: put in Data.Binary2.Get and name pushFromHandle?
     feed (Done _ _ x) _ = return (Right x)
     feed (Fail _ pos str) _ = return (Left (pos, str))
     feed (Partial k) h = do

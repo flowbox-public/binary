@@ -47,9 +47,9 @@ First:
 
 and then write an instance of Binary for the type you wish to serialise.
 An example doing exactly this can be found in the Data.Binary module.
-You can also use the Data.Binary.Builder module to efficiently build
+You can also use the Data.Binary2.Builder module to efficiently build
 lazy bytestrings using the ``Builder`` monoid. Or, alternatively, the
-Data.Binary.Get and Data.Binary.Put to serialize/deserialize using
+Data.Binary2.Get and Data.Binary2.Put to serialize/deserialize using
 the ``Get`` and ``Put`` monads.
 
 More information in the haddock documentation.

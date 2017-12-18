@@ -17,7 +17,7 @@ import Data.Char (ord)
 import Data.Monoid (Monoid(mappend, mempty))
 import Data.Word (Word8)
 
-import Data.Binary.Builder
+import Data.Binary2.Builder
 
 #if !MIN_VERSION_bytestring(0,10,0)
 instance NFData S.ByteString

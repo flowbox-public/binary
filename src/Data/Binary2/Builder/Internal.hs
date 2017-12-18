@@ -4,7 +4,7 @@
 #endif
 -----------------------------------------------------------------------------
 -- |
--- Module      : Data.Binary.Builder.Internal
+-- Module      : Data.Binary2.Builder.Internal
 -- Copyright   : Lennart Kolmodin, Ross Paterson
 -- License     : BSD3-style (see LICENSE)
 -- 
@@ -19,10 +19,10 @@
 --
 -----------------------------------------------------------------------------
 
-module Data.Binary.Builder.Internal (
+module Data.Binary2.Builder.Internal (
     -- * Low-level construction of Builders
       writeN
     , writeAtMost
     ) where
 
-import Data.Binary.Builder.Base
+import Data.Binary2.Builder.Base

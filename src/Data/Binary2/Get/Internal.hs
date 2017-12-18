@@ -4,7 +4,7 @@
 -- RankNTypes forall r. statement
 -- MagicHash the (# unboxing #), also needs GHC.primitives
 
-module Data.Binary.Get.Internal (
+module Data.Binary2.Get.Internal (
 
     -- * The Get type
       Get
@@ -241,7 +241,7 @@ getBytes = getByteString
 {-# INLINE getBytes #-}
 
 instance Alternative Get where
-  empty = C $ \inp _ks -> Fail inp "Data.Binary.Get(Alternative).empty"
+  empty = C $ \inp _ks -> Fail inp "Data.Binary2.Get(Alternative).empty"
   (<|>) f g = do
     (decoder, bs) <- runAndKeepTrack f
     case decoder of

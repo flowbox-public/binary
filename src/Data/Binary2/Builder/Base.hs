@@ -5,7 +5,7 @@
 
 -----------------------------------------------------------------------------
 -- |
--- Module      : Data.Binary.Builder.Base
+-- Module      : Data.Binary2.Builder.Base
 -- Copyright   : Lennart Kolmodin, Ross Paterson
 -- License     : BSD3-style (see LICENSE)
 --
@@ -14,7 +14,7 @@
 -- Portability : portable to Hugs and GHC
 --
 -- A module exporting types and functions that are shared by
--- 'Data.Binary.Builder' and 'Data.Binary.Builder.Internal'.
+-- 'Data.Binary2.Builder' and 'Data.Binary2.Builder.Internal'.
 --
 -----------------------------------------------------------------------------
 
@@ -22,7 +22,7 @@
 #include "MachDeps.h"
 #endif
 
-module Data.Binary.Builder.Base (
+module Data.Binary2.Builder.Base (
     -- * The Builder type
       Builder
     , toLazyByteString

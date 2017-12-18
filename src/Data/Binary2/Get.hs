@@ -9,7 +9,7 @@
 
 -----------------------------------------------------------------------------
 -- |
--- Module      : Data.Binary.Get
+-- Module      : Data.Binary2.Get
 -- Copyright   : Lennart Kolmodin
 -- License     : BSD3-style (see LICENSE)
 --
@@ -135,7 +135,7 @@
 -----------------------------------------------------------------------------
 
 
-module Data.Binary.Get (
+module Data.Binary2.Get (
 
     -- * The Get monad
       Get
@@ -205,8 +205,8 @@ import qualified Data.ByteString.Lazy.Internal as L
 
 import Control.Applicative
 
-import Data.Binary.Get.Internal hiding ( Decoder(..), runGetIncremental )
-import qualified Data.Binary.Get.Internal as I
+import Data.Binary2.Get.Internal hiding ( Decoder(..), runGetIncremental )
+import qualified Data.Binary2.Get.Internal as I
 
 #if defined(__GLASGOW_HASKELL__) && !defined(__HADDOCK__)
 -- needed for (# unboxing #) with magic hash
@@ -283,7 +283,7 @@ runGetState g lbs0 pos' = go (runGetIncremental g) lbs0
   go (Done s pos a) lbs = (a, L.chunk s lbs, pos+pos')
   go (Partial k) lbs = go (k (takeHeadChunk lbs)) (dropHeadChunk lbs)
   go (Fail _ pos msg) _ =
-    error ("Data.Binary.Get.runGetState at position " ++ show pos ++ ": " ++ msg)
+    error ("Data.Binary2.Get.runGetState at position " ++ show pos ++ ": " ++ msg)
 
 takeHeadChunk :: L.ByteString -> Maybe B.ByteString
 takeHeadChunk lbs =
@@ -320,7 +320,7 @@ runGet g lbs0 = feedAll (runGetIncremental g) lbs0
   feedAll (Done _ _ x) _ = x
   feedAll (Partial k) lbs = feedAll (k (takeHeadChunk lbs)) (dropHeadChunk lbs)
   feedAll (Fail _ pos msg) _ =
-    error ("Data.Binary.Get.runGet at position " ++ show pos ++ ": " ++ msg)
+    error ("Data.Binary2.Get.runGet at position " ++ show pos ++ ": " ++ msg)
 
 
 -- | Feed a 'Decoder' with more input. If the 'Decoder' is 'Done' or 'Fail' it
